@@ -1,3 +1,4 @@
+---
 <!-- SPDX-License-Identifier: Apache-2.0
      https://www.apache.org/licenses/LICENSE-2.0 -->
 
@@ -19,7 +20,7 @@ These terms are defined as untranslatable across Airflow locales. Do not
 translate them regardless of context:
 
 - `Airflow` — product name
-- `Dag` / `Dags` — Airflow concept; never write `DAG`
+- `DAG` / `DAGs` — Airflow concept; never write `Dag`
 - `XCom` / `XComs` — Airflow cross-communication mechanism
 - `REST API`
 - `JSON`
@@ -50,7 +51,7 @@ first and keep the guide limited to terms with real usage.
 | Task          | `مهمة`             |       |
 | Task Instance | `مثيل المهمة`      |       |
 | Task Group    | `مجموعة المهام`    |       |
-| Dag Run       | `تشغيل Dag`        | Keep `Dag` in English |
+| DAG Run       | `تشغيل DAG`        | Keep `DAG` in English |
 | Pool          | `مجموعة الموارد`   |       |
 | Provider      | `حُزمة`            | Plural in current UI: `حُزم` |
 | Operator      | `المشغّل`          | Plural in current UI: `المُشغِّلات` |
@@ -77,11 +78,11 @@ first and keep the guide limited to terms with real usage.
 
 ### Mixed Arabic and English Terms
 
-- Keep embedded English Airflow terms in their original casing: `Dag`, `Dags`,
+- Keep embedded English Airflow terms in their original casing: `DAG`, `DAGs`,
   `XCom`.
 - Preserve placeholders exactly as written: `{{count}}`, `{{dagDisplayName}}`,
   `{{hotkey}}`, and so on.
-- Existing patterns include `معرف Dag`, `تشغيل Dag`, and `{{count}} Dags`.
+- Existing patterns include `معرف DAG`, `تشغيل DAG`, and `{{count}} DAGs`.
 
 ### Plural Forms
 
@@ -107,18 +108,18 @@ Plural guidance should follow the Unicode CLDR Arabic cardinal rules:
 Keep all required keys even when some forms are textually identical.
 
 For Airflow terms that stay in English, keep the English term rather than
-forcing Arabic dual or plural endings. Example: use `2 Dags`, not `Dagان` or
-`Dagين`.
+forcing Arabic dual or plural endings. Example: use `2 DAGs`, not `DAGان` or
+`DAGين`.
 
 Reuse the existing repo patterns:
 
 ```json
-"dag_zero": "لا يوجد أي Dag",
-"dag_one": "Dag",
-"dag_two": "2 Dags",
-"dag_few": "Dags",
-"dag_many": "Dags",
-"dag_other": "Dags"
+"dag_zero": "لا يوجد أي DAG",
+"dag_one": "DAG",
+"dag_two": "2 DAGs",
+"dag_few": "DAGs",
+"dag_many": "DAGs",
+"dag_other": "DAGs"
 ```
 
 ```json
@@ -160,9 +161,9 @@ Providers           -> "حُزم"
 **Current Dag patterns:**
 
 ```text
-dagId               -> "معرف Dag"
-triggerDag.title    -> "تشغيل Dag"
-favoriteDags_zero   -> "لا توجد أي Dags مفضلة"
+dagId               -> "معرف DAG"
+triggerDag.title    -> "تشغيل DAG"
+favoriteDags_zero   -> "لا توجد أي DAGs مفضلة"
 ```
 
 **Current action-label style:**
@@ -178,7 +179,7 @@ modal.save          -> "حفظ"
 **DO:**
 
 - Match the wording already used in `ar/*.json`
-- Keep `Dag` and `XCom` in English
+- Keep `DAG` and `XCom` in English
 - Use concise MSA suitable for a software UI
 - Provide all six Arabic plural suffixes when a key is pluralized
 - Use Western Arabic numerals only
@@ -186,9 +187,9 @@ modal.save          -> "حفظ"
 
 **DON'T:**
 
-- Write `DAG`
+- Write `Dag`
 - Invent a large glossary for terms that are not used in the current locale
-- Attach Arabic dual or plural suffixes to English Airflow terms like `Dag`
+- Attach Arabic dual or plural suffixes to English Airflow terms like `DAG`
 - Replace established UI wording with a textbook alternative without evidence in
   the repo
 - Use Eastern Arabic numerals
